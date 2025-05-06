@@ -1,0 +1,28 @@
+SYSTEM = C5H5N
+
+ENCUT = 520           # Plane-wave cutoff energy (adjust based on POTCAR)
+EDIFF = 1E-5          # Electronic convergence criterion
+EDIFFG = -0.02        # Ionic convergence criterion for geometry optimization
+
+IBRION = 2            # Conjugate gradient algorithm for ionic relaxation
+ISIF = 2              # Relax ions, keep cell fixed
+NSW = 100             # Maximum number of ionic steps
+
+ISMEAR = 0            # Gaussian smearing (good for molecules)
+SIGMA = 0.05          # Smearing width in eV
+
+LWAVE = .FALSE.       # Do not write WAVECAR
+LCHARG = .FALSE.      # Do not write CHGCAR
+
+PREC = Accurate       # Precision setting
+
+GGA = PE              # PBE functional
+ALGO = Normal         # Electronic minimization algorithm
+NELM = 100            # Max electronic steps
+NELMIN = 5            # Min electronic steps
+
+ISPIN = 1             # Non-spin-polarized (assumes closed shell molecule)
+
+# Optional for vacuum molecule
+LREAL = Auto
+KPOINTS = Gamma       # Ensure your KPOINTS file uses only Gamma point

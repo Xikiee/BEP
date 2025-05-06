@@ -1,0 +1,27 @@
+#------ Electronic Settings ------------
+ENCUT     = 540             # according to paper (1)
+PREC      = Accurate        # ensures tight FFT grids and better force precision 
+EDIFF     = 1E-8            # converged total energy to 10e-8 eV (tight, per vibrational needs)
+LREAL     = .FALSE.         # better accuracy in force constants (especially for large cells)
+SIGMA     = 0.1             # kT =0.1 ev, matches smearing in paper (1)
+
+#------ Structual relaxation (Prior to Vibrations) -------------
+IBRION    = 2               # conjugate gradient optimization (relaxation)
+ISIF      = 2               # relax only atomic positions (not cell shape or volume)
+NSW       = 200             # max number of relaxation steps 
+EDIFFG    = -0.02           # stop relaxation when forces are < 0.02 eV/A (as in paper (1))
+
+#-------Vibrational frequency settings -------------------
+IBRION    = 5               # switch to finite difference mode for frequency calc 
+NFREE     = 2               # central difference method 
+POTIM     = 0.01            # 0.01 A displacement as used in the paper (1)
+
+#-------vdW funcatinal settings -------------------------(are these even needed, check)
+GGA       = BO              # vdW-DF functional 
+LUSE_VDW  = .TRUE.          # activate vdW correction 
+AGGAC     = 0.000           # required setting for vdW-DF
+LASPH     = .TRUE.          # included non-spherical corrections (important for O,Al)
+
+
+
+

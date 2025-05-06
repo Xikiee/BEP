@@ -1,0 +1,15 @@
+ENCUT     = 540             # according to paper 
+PREC      = Accurate        # ensures tight FFT grids and better force precision 
+EDIFF     = 1E-7            # tight convergence better for more accuracy on vibrational frequency
+
+ISMEAR   = 0                # gaussian smearing 
+SIGMA     = 0.1             # width of smearing low enough to help SCF, matches smearing in paper
+
+IBRION    = 5               # switch to finite difference mode for frequency calc 
+NFREE     = 2               # central difference method 
+POTIM     = 0.01            # 0.01 A displacement as used in the paper 
+
+GGA       = BO              # vdW-DF functional, indentified by paper as being most accurate
+LUSE_VDW  = .TRUE.          # activate vdW correction 
+AGGAC     = 0.000           # required setting for vdW-DF
+LASPH     = .TRUE.          # included non-spherical corrections (important for O,Al)

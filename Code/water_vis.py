@@ -1,1 +1,1 @@
-from visualization_vasp import *
+from vasp_plotting import *
