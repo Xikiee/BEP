@@ -11,3 +11,4 @@ EDIFFG      = -0.02             # stop when all atomic force are below 0.02 eV/A
 ISMEAR      = 0                 # gausssian smearing
 SIGMA       = 0.01              # width of smearing low just enough to help SCF converge (same as in paper )
 
+GGA         = PE                # use the standard 

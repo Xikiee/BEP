@@ -10,7 +10,4 @@ IBRION    = 5               # switch to finite difference mode for frequency cal
 NFREE     = 2               # central difference method 
 POTIM     = 0.01            # 0.01 A displacement as used in the paper 
 
-GGA       = BO              # vdW-DF functional, indentified by paper as being most accurate
-LUSE_VDW  = .TRUE.          # activate vdW correction 
-AGGAC     = 0.000           # required setting for vdW-DF
-LASPH     = .TRUE.          # included non-spherical corrections (important for O,Al)
+GGA       = PE              # vdW-DF functional, indentified by paper as being most accurate
