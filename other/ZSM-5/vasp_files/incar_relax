@@ -1,5 +1,6 @@
-ENCUT       = 540               # cut off energy used in paper 
-PREC        = Accurate          # high precision FFT grid and charge density for better force calculations 
+# geometry optimization
+ENCUT       = 400               # 
+PREC        = Fast              # high precision FFT grid and charge density for better force calculations 
 EDIFF       = 1E-5              # need to only relax the surface hence SCF < 1E-5 eV
 
 IBRION      = 2                 # conjugate gradient alrogrithm for ionic relaxation 
@@ -8,5 +9,5 @@ NSW         = 100               # max number of ionic steps
 EDIFFG      = -0.02             # stop when all atomic force are below 0.02 eV/A as in paper 
 
 ISMEAR      = 0                 # gausssian smearing
-SIGMA       = 0.1               # width of smearing low just enough to help SCF converge (same as in paper )
+SIGMA       = 0.01              # width of smearing low just enough to help SCF converge (same as in paper )
 
