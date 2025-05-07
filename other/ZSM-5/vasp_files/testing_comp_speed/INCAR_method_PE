@@ -1,0 +1,10 @@
+# for single point testing comp speed of the method PE
+ENCUT = 400
+PREC  = Fast 
+EDIFF = 1E-5
+
+IBRION= -1
+NSW   = 0
+
+ISMEAR= 0
+SIGMA = 0.01/
